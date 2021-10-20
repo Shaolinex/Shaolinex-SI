@@ -25,7 +25,7 @@ Puerto = 8000
 Mi_Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 Mi_Socket.connect((Host, Puerto))
 #%% Llave
-kay = b"supersecretpassw" # Yo soy pablo emilio escobar gaviria XD
+kay = b"narcotraficantes" # Yo soy pablo emilio escobar gaviria XD
 
 #%%  DH
 Recibir = Mi_Socket.recv(1024)
@@ -55,7 +55,7 @@ try: # en caso de que no exista respuesta del servidor se finaliza
 
     print("Escribiendo el resultado...\n") # Los puntos son para mas tension owo
     textoplano = quitarPadding(textoplano) 
-    
+    print(textoplano)
     archivo = open('mensajerecibido.txt','w+') # Se escribe el mensaje traducido
     archivo.writelines(textoplano.decode('ascii'))
     archivo.close()
